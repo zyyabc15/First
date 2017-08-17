@@ -1,22 +1,23 @@
 import React ,{Component,PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Item from './item';
-import actions from '../actions/action';
+import actions_ from '../actions/action';
 import {bindActionCreators} from 'redux';
 
 class Section extends Component {
     constructor(props){
         super(props);
     }
-    render(){
 
+
+    render(){
         return(
         <section>
             <input type="checkbox"/>
             <ul>
                 {
                     this.props.state_p.todoItems.map((item,index)=>{
-                        return <Item key={index} delItem={actions.delItem} value={item.value} ></Item>
+                        return <Item index={index} key={index} delItem={this.props.actions.delItem} value={item.value} ></Item>
                     })
                 }
             </ul>
@@ -31,6 +32,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(actions_, dispatch)
 });
  export default connect(mapStateToProps, mapDispatchToProps)(Section);

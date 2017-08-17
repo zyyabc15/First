@@ -17,8 +17,7 @@ class Header extends Component{
             this.props.actions.insertItem(this.state.value);
             this.setState({value:""});
         }
-        //e.preventDefault();
-        //e.stopPropagation();
+       
         
     }
        

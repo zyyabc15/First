@@ -43,7 +43,6 @@ let delItem = (state, action) => {
   const type = action.type;
   if(type === 'TODO_DEL_ITEM') {
     let { count} = state;
-    
     let newstate = fromJS(state).update('todoItems',list=>list.splice(action.payload,1))
                                 .set('count', --count)
                                 .toJS();
