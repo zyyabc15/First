@@ -3,9 +3,9 @@ let actions = {
         type: 'TODO_INSERT_ITEM',
         payload: value
     }),
-    delItem: id =>({
+    delItem: index =>({
         type: 'TODO_DEL_ITEM',
-        payload: id
+        payload: index
     })
     
 }

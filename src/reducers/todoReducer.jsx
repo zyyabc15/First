@@ -3,15 +3,12 @@ import { fromJS } from 'immutable';
 let initialState = {
   showType:'All',
   count:2,
-  newId:2,
   todoItems:[
     {
-      id:0,
       isActive:true,
       value:'abc',
     },
     {
-      id:1,
       isActive:true,
       value:'def',
     },
@@ -27,7 +24,6 @@ let insertItem = (state, action) => {
     let { count, todoItems, showType,newId} = state;
     
     let item = {
-      id:newId,
       isActive:true,
       value:action.payload
     }
@@ -45,16 +41,11 @@ let insertItem = (state, action) => {
 
 let delItem = (state, action) => {
   const type = action.type;
-  let item = {
-      id:action.payload,
-      isActive:true,
-      value:'abc'
-    }
   if(type === 'TODO_DEL_ITEM') {
-    let { count,newId} = state;
-    let newstate = fromJS(state).deleteIn('apples', item)
+    let { count} = state;
+    
+    let newstate = fromJS(state).update('todoItems',list=>list.splice(action.payload,1))
                                 .set('count', --count)
-                                .set('newId', ++newId)
                                 .toJS();
     return newstate ;
   
