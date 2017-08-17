@@ -17,7 +17,7 @@ class Section extends Component {
             <ul>
                 {
                     this.props.state_p.todoItems.map((item,index)=>{
-                        return <Item index={index} key={index} delItem={this.props.actions.delItem} value={item.value} ></Item>
+                        return <Item index={index} key={index} insertItem={this.props.actions.insertItem} delItem={this.props.actions.delItem} value={item.value} ></Item>
                     })
                 }
             </ul>

@@ -11,7 +11,7 @@ let initialState = {
     {
       isActive:true,
       value:'def',
-    },
+    }
 
   ]
   
