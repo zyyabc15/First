@@ -18,7 +18,7 @@ class Item extends Component{
     }
     
     handleDoubleClick = (e) => {
-        console.log(e.target);
+        this.props.refs.inputEdit.value = e.target.value;
         this.setState({
             editing:true,
             //value:e.target.value
@@ -48,7 +48,7 @@ class Item extends Component{
                     <button onClick = {this.handleClick}>删除</button>
                 </div>)
                 }
-                {this.state.editing && <input type="text" value = {this.state.value} onBlur={this.handleBlur}  onChange={this.handleChange} />}
+                {this.state.editing && <input type="text" autoFocus="autofocus" ref="inputEdit" value = {this.state.value} onBlur={this.handleBlur}  onChange={this.handleChange} />}
                 
             </div>
         )
