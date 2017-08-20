@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import actions from '../actions/action';
+import actions_ from '../actions/action';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 class Header extends Component{
@@ -67,7 +67,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(actions_, dispatch)
 });
 
  export default connect(mapStateToProps, mapDispatchToProps)(Header);
