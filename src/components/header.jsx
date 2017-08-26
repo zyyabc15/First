@@ -49,15 +49,15 @@ class Header extends Component{
         
         return (
            
-            <div>
-                <h2>todos</h2>
+            <header>
+                <h1>todos</h1>
                 <input type="text" value={this.state.value} 
                 onChange={this.handleChange} 
                 onKeyPress = {this.handleKeyDown}
                 placeholder="what will be done?"
                />
                 
-            </div>
+            </header>
         )
     }
 }
