@@ -4,7 +4,8 @@ import Header from './header';
 import Footer from './footer';
 import '../css/style.css';
 import '../css/inputStyle.css';
-
+import '../css/title.css';
+import '../css/button.css';
 
 export default class extends Component {
     constructor(props){

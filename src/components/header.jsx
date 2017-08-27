@@ -50,7 +50,7 @@ class Header extends Component{
         return (
            
             <header>
-                <h1>todos</h1>
+                <div className="content">todos</div>
                 <input className="inputStyle" type="text" value={this.state.value} 
                 onChange={this.handleChange} 
                 onKeyPress = {this.handleKeyDown}

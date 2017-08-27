@@ -52,7 +52,7 @@ class Item extends Component{
                 (<div className="lableContainer">
                     <input type="checkbox" className="toggle" checked={!this.props.active} onChange = {this.toggleItem}></input>
                     <label onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
-                    <button onClick = {this.handleClick}>删除</button>
+                    <button onClick = {this.handleClick} className="animBtn themeB">删除</button>
                 </div>)
                 }
                 {this.state.editing && <input type="text" className="editInput"
