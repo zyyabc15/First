@@ -18,7 +18,7 @@ class Section extends Component {
         let isChecked = !this.props.state_p.count>0
         return(
         <section>
-            {isShow && <input type="checkbox"  checked={isShow && isChecked} onChange = {this.toggleAll}/>}
+            {isShow && <input className="toggleAll" type="checkbox"   checked={isShow && isChecked} onChange = {this.toggleAll}/>}
             <ul>
                 {
                     this.props.state_p.todoItems.map((item,index)=>{

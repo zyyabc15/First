@@ -23,13 +23,13 @@ class Footer extends Component{
     }
     render(){
         return (
-            <div>
-                <lable>{this.props.state_p.count} items left</lable>
+            <footer>
+                <label>{this.props.state_p.count} items left</label>
                 <button onClick={this.handleClickAll}>All</button>
                 <button onClick={this.handleClickActive}>Active</button>
                 <button onClick={this.handleClickCompleted}>completed</button>
-                <button onClick={this.handleClickCC}>Clear completed</button>
-            </div>
+                <button className="clearCom" onClick={this.handleClickCC}>Clear Completed</button>
+            </footer>
         )
     }
 }

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import '.././style.css';
+import '../css/style.css';
 import PropTypes from 'prop-types'
 
 class Item extends Component{
@@ -47,15 +47,15 @@ class Item extends Component{
     render(){
        
         return (
-            <div >
+            <li className="itemContainer">
                 {this.state.editing ||
-                (<div>
-                    <input type="checkbox" checked={!this.props.active} onChange = {this.toggleItem}></input>
+                (<div className="lableContainer">
+                    <input type="checkbox" className="toggle" checked={!this.props.active} onChange = {this.toggleItem}></input>
                     <label onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
                     <button onClick = {this.handleClick}>删除</button>
                 </div>)
                 }
-                {this.state.editing && <input type="text" 
+                {this.state.editing && <input type="text" className="editInput"
                  autoFocus="autofocus" 
                  value = {this.state.value} 
                  onBlur={this.handleBlur} 
@@ -63,7 +63,7 @@ class Item extends Component{
                  onKeyPress={this.handleKeyPress}
                   />}
                 
-            </div>
+            </li>
         )
 
     } 

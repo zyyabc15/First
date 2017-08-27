@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import Section from './section';
 import Header from './header';
 import Footer from './footer';
-import '.././style.css';
+import '../css/style.css';
+import '../css/inputStyle.css';
+
 
 export default class extends Component {
     constructor(props){
@@ -10,10 +12,12 @@ export default class extends Component {
     }
     render(){
         return (
-            <div>
-                <Header/>
-                <Section/>
-                <Footer/>
+            <div className="container" >
+                <div className="opacity4">
+                    <Header/>
+                    <Section/>
+                    <Footer/>
+                </div>
             </div>
         )
     }
