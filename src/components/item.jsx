@@ -41,7 +41,7 @@ class Item extends Component{
         
     }
     toggleItem = (e) => {
-
+         //e.nativeEvent.stopImmediatePropagation();
         this.props.toggle(this.props.index,!e.target.checked);
     }
     render(){
@@ -50,9 +50,11 @@ class Item extends Component{
             <li className="itemContainer">
                 {this.state.editing ||
                 (<div className="lableContainer">
-                    <input type="checkbox" className="toggle" checked={!this.props.active} onChange = {this.toggleItem}></input>
-                    <label onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
-                    <button onClick = {this.handleClick} className="animBtn themeB">删除</button>
+                    <div className="checked">
+                        <input type="checkbox" className="innerCheck" checked={!this.props.active} onChange = {this.toggleItem}></input>
+                    </div>
+                    <label  onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
+                    <button onClick = {this.handleClick} className="animBtn">X</button>
                 </div>)
                 }
                 {this.state.editing && <input type="text" className="editInput"

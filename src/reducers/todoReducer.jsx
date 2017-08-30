@@ -9,7 +9,7 @@ let initialState = {
       value:'abc',
     },
     {
-      isActive:true,
+      isActive:false,
       value:'def',
     }
 

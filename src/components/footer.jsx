@@ -7,6 +7,10 @@ import PropTypes from 'prop-types';
 class Footer extends Component{
     constructor(props){
         super(props);
+        
+        this.state = {
+            showClearCom:""
+        }
     }
     handleClickAll = () => {
         this.props.actions.changeShowType('All');
@@ -22,13 +26,21 @@ class Footer extends Component{
         this.props.actions.clearCompleted();
     }
     render(){
+        let list = this.props.state_p.todoItems;
+        let showClearCom = false;
+        list.map(item=>{
+            if(item.isActive === false){
+                showClearCom = true;
+                return;
+            }
+        })
         return (
             <footer>
                 <label>{this.props.state_p.count} items left</label>
                 <button onClick={this.handleClickAll}>All</button>
                 <button onClick={this.handleClickActive}>Active</button>
                 <button onClick={this.handleClickCompleted}>completed</button>
-                <button className="clearCom" onClick={this.handleClickCC}>Clear Completed</button>
+                <button className={showClearCom? "showClear clearCom":"clearCom"} onClick={this.handleClickCC}>Clear Completed</button>
             </footer>
         )
     }
