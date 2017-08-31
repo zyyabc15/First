@@ -50,10 +50,9 @@ class Item extends Component{
             <li className="itemContainer">
                 {this.state.editing ||
                 (<div className="lableContainer">
-                    <div className="checked">
-                        <input type="checkbox" className="innerCheck" checked={!this.props.active} onChange = {this.toggleItem}></input>
-                    </div>
-                    <label  onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
+                    <input type="checkbox" id={"option"+this.props.index} className="innerCheck" checked={!this.props.active} onChange = {this.toggleItem}></input>
+                    <label htmlFor={"option"+this.props.index} className="labelFor"><span></span></label> 
+                    <label className="labelCon"  onDoubleClick={this.handleDoubleClick}>{this.props.value}</label>
                     <button onClick = {this.handleClick} className="animBtn">X</button>
                 </div>)
                 }
