@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Section from './section';
 import Header from './header';
 import Footer from './footer';
@@ -8,16 +8,16 @@ import '../css/title.css';
 import '../css/button.css';
 
 export default class extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-    render(){
+    render() {
         return (
             <div className="container" >
                 <div className="opacity4">
-                    <Header/>
-                    <Section/>
-                    <Footer/>
+                    <Header />
+                    <Section />
+                    <Footer />
                 </div>
             </div>
         )

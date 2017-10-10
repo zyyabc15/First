@@ -1,23 +1,24 @@
 * {
     color: #5E6C77;
     box-sizing: border-box;
-    
 }
-body{
+
+body {
     background: #222222
 }
-header h1{
+
+header h1 {
     text-align: center;
-    background-color:#ffffff;
-    opacity:0.7;
+    background-color: #ffffff;
+    opacity: 0.7;
     padding: 15px;
     font-size: 50px;
     color: #000000;
     width: 100%;
     height: 100px;
     display: block;
-    
 }
+
 
 /* .opacity4{
     width: 100%;
@@ -25,7 +26,8 @@ header h1{
     background-color:#ffffff;
     opacity:0.7;
 }  */
-.container{
+
+.container {
     /* background: #ffffff
     url('ssbj.jpg')
     no-repeat; */
@@ -33,33 +35,31 @@ header h1{
     width: 70%;
     height: 700px;
     display: block;
-    margin:0 auto;
-
-    
-
+    margin: 0 auto;
 }
-section{
+
+section {
     position: relative;
     display: inline-block;
     width: 50%;
 }
-section ul{
-    list-style-type:none;
+
+section ul {
+    list-style-type: none;
     margin: 0px;
     width: 100%;
     padding: 0;
-    
 }
 
-.toggleAll{
+.toggleAll {
     position: absolute;
     top: -33px;
     left: -27px;
     display: none;
 }
 
-section .toggleAll + label span{
-/* position: absolute; */
+section .toggleAll+label span {
+    /* position: absolute; */
     display: inline-block;
     vertical-align: middle;
     width: 1.5em;
@@ -69,8 +69,9 @@ section .toggleAll + label span{
     left: -30px;
     margin-top: 10px;
 }
-section .toggleAll + label span{
-    position: absolute; 
+
+section .toggleAll+label span {
+    position: absolute;
     top: -2.9em;
     left: -4em;
     box-sizing: padding-box;
@@ -84,29 +85,29 @@ section .toggleAll + label span{
     margin-top: 10px;
     padding: 0.1em;
 }
-section .toggleAll:checked + label span {
 
+section .toggleAll:checked+label span {
     background-color: #888;
     background-size: 0em;
-    background-clip:content-box;
+    background-clip: content-box;
 }
-.itemContainer .toggle{
-  
+
+.itemContainer .toggle {
     position: absolute;
     left: -27px;
     margin-top: 12px;
-    border: 2px solid  #5E6C77;
+    border: 2px solid #5E6C77;
     border-radius: 5px;
     width: 20px;
     height: 20px;
     background: none;
-   
 }
 
-.itemContainer .innerCheck{
+.itemContainer .innerCheck {
     display: none;
 }
-.itemContainer input[type="checkbox"] + .labelFor span {
+
+.itemContainer input[type="checkbox"]+.labelFor span {
     position: absolute;
     display: inline-block;
     vertical-align: middle;
@@ -118,7 +119,8 @@ section .toggleAll:checked + label span {
     margin-top: 10px;
     /* background: radial-gradient(#eee, #aaa); */
 }
-.itemContainer input[type="checkbox"]:checked + .labelFor span::before {
+
+.itemContainer input[type="checkbox"]:checked+.labelFor span::before {
     position: absolute;
     content: "✓";
     color: #888;
@@ -128,23 +130,24 @@ section .toggleAll:checked + label span {
     top: -0.4em;
     left: -0.07em;
 }
+
 .itemContainer .labelFor {
-  cursor: pointer;
-  color: #555;
+    cursor: pointer;
+    color: #555;
 }
-.itemContainer{
+
+.itemContainer {
     width: 100%;
     height: 50px;
 }
-.itemContainer .editInput{
+
+.itemContainer .editInput {
     width: 100%;
     height: 50px;
     text-align: left;
     display: inline-block;
     font-size: 30px;
-
-
-     border: 2px solid #5E6C77;
+    border: 2px solid #5E6C77;
     color: #5E6C77;
     border-radius: .25em;
     background: transparent;
@@ -154,12 +157,14 @@ section .toggleAll:checked + label span {
     font-size: 30px;
     padding: 0 15px;
 }
-.itemContainer .editInput:focus{
+
+.itemContainer .editInput:focus {
     outline: none;
     color: #A2ACB3;
     border-color: #A2ACB3;
 }
-.itemContainer .labelCon{
+
+.itemContainer .labelCon {
     width: 100%;
     height: 50px;
     display: inline-block;
@@ -167,53 +172,58 @@ section .toggleAll:checked + label span {
     padding: 0 15px;
     font-size: 30px
 }
-.itemContainer button{
+
+.itemContainer button {
     position: absolute;
     right: 1%;
     padding: 15px;
 }
-.itemContainer .lableContainer{
+
+.itemContainer .lableContainer {
     width: 100%;
 }
-#root{
+
+#root {
     text-align: center;
-    
 }
 
-footer{
-    width:50%;
+footer {
+    width: 50%;
     margin: 5px auto;
 }
-footer label{
+
+footer label {
     float: left;
     font-size: 15px;
-    margin:5px;
+    margin: 5px;
 }
-footer .clearCom{
+
+footer .clearCom {
     float: right;
     opacity: 0;
-
 }
-footer .showClear{
+
+footer .showClear {
     float: right;
     opacity: 1;
 }
-footer button{
-   
+
+footer button {
     font-size: 13px;
     margin: 5px;
     background: transparent;
-    border-color: gray ;
+    border-color: gray;
     border-radius: 5px;
     outline: none;
 }
-footer button:hover{
+
+footer button:hover {
     color: white;
     cursor: pointer;
     opacity: 0.4
 }
 
-.animBtn{
+.animBtn {
     opacity: 0;
     background: transparent;
     border: none;
@@ -221,11 +231,14 @@ footer button:hover{
     color: white;
     font-weight: 20;
     font-size: 20px;
+    outline: none;
 }
-.animBtn:hover{
+
+.animBtn:hover {
     cursor: pointer;
     opacity: 0.6
 }
-.lableContainer:hover  .animBtn{
+
+.lableContainer:hover .animBtn {
     opacity: 0.5;
 }

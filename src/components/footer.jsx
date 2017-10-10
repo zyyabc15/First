@@ -1,20 +1,20 @@
-import React,{Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import actions_ from '../actions/action';
 import PropTypes from 'prop-types';
 
-class Footer extends Component{
-    constructor(props){
+class Footer extends Component {
+    constructor(props) {
         super(props);
-        
+
         this.state = {
-            showClearCom:""
+            showClearCom: ""
         }
     }
     handleClickAll = () => {
         this.props.actions.changeShowType('All');
-        
+
     }
     handleClickActive = () => {
         this.props.actions.changeShowType('Active');
@@ -25,11 +25,11 @@ class Footer extends Component{
     handleClickCC = () => {
         this.props.actions.clearCompleted();
     }
-    render(){
+    render() {
         let list = this.props.state_p.todoItems;
         let showClearCom = false;
-        list.map(item=>{
-            if(item.isActive === false){
+        list.map(item => {
+            if (item.isActive === false) {
                 showClearCom = true;
                 return;
             }
@@ -40,7 +40,7 @@ class Footer extends Component{
                 <button onClick={this.handleClickAll}>All</button>
                 <button onClick={this.handleClickActive}>Active</button>
                 <button onClick={this.handleClickCompleted}>completed</button>
-                <button className={showClearCom? "showClear clearCom":"clearCom"} onClick={this.handleClickCC}>Clear Completed</button>
+                <button className={showClearCom ? "showClear clearCom" : "clearCom"} onClick={this.handleClickCC}>Clear Completed</button>
             </footer>
         )
     }
